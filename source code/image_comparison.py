@@ -21,8 +21,8 @@ import face_recognition
 import os
 
 # Define image paths (update these paths as needed)
-image_path1 = "/absolute/path/to/Messi1.jpg"
-image_path2 = "/absolute/path/to/images/Messi.jpg"
+image_path1 = "source code/Messi1.jpg"
+image_path2 = "source code/images/Messi.jpg"
 
 def load_image(image_path):
     img = cv2.imread(image_path)
