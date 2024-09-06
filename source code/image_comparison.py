@@ -18,10 +18,11 @@
 
 import cv2
 import face_recognition
+import os
 
-# Define image paths
-image_path1 = "Messi1.jpg"
-image_path2 = "images/Messi.jpg"
+# Define image paths (update these paths as needed)
+image_path1 = "/absolute/path/to/Messi1.jpg"
+image_path2 = "/absolute/path/to/images/Messi.jpg"
 
 def load_image(image_path):
     img = cv2.imread(image_path)
@@ -38,6 +39,11 @@ def get_face_encoding(image):
         print("Error: No faces found in image.")
         return None
     return img_encodings[0]
+
+# Print current working directory and file paths
+print("Current working directory:", os.getcwd())
+print("Path to image 1:", image_path1)
+print("Path to image 2:", image_path2)
 
 # Load and process the first image
 img1 = load_image(image_path1)
